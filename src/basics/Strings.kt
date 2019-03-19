@@ -1,3 +1,5 @@
+package basics
+
 fun main(args: Array<String>) {
 
     //  \r: everything after this is left off

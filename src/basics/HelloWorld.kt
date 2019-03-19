@@ -1,3 +1,5 @@
+package basics
+
 fun main(args: Array<String>) {
     //declare
     // immutable var
