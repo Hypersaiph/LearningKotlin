@@ -1,3 +1,8 @@
 fun main(args: Array<String>) {
-    println("HELLOOOOO WORLD!!!")
+    //declare
+    var name = "JonnyB"
+    var isAwesome = true
+
+    //retrieve contents
+    println("IS "+ name + " awesome? The answer is : "+ isAwesome)
 }
