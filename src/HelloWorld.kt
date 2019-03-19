@@ -19,4 +19,9 @@ fun main(args: Array<String>) {
     val longNum = 123456789123456789L //64 bit number
 
     val aDouble = a.toString() // conversion type
+
+
+    var hero: String
+    hero = "Captain Marvel"
+    println(hero)
 }
