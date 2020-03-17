@@ -20,9 +20,13 @@ open class Vehicle constructor(make: String, model: String) {
     }
 }
 
-class Car constructor(make: String, model: String, color: String): Vehicle(make, model) {
+class Car constructor(val make: String, val model: String, val color: String): Vehicle(make, model) {
     override fun accelerate() {
         println("We are going ludicrous mode!!")    }
+
+    fun details() {
+        println("This is a $make $model $color car!")
+    }
 }
 
 class Truck(val make: String, val model: String, val towingCapacity: Int): Vehicle(make, model) {
