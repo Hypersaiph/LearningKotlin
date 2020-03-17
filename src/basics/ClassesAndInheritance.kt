@@ -1,14 +1,15 @@
 package basics
 
 fun main(args: Array<String>) {
-    val car = Car("Toyota", "Avalon", "Black")
-    println(car.make)
-    println(car.model)
+    val tesla = Car("Toyota", "Avalon", "Black")
+    tesla.accelerate()
 
+    val cyberTruck = Truck("Tesla", "Cybertruck", 10000)
+    cyberTruck.details()
 }
 
-class Vehicle constructor(make: String, model: String) {
-    fun accelerate() {
+open class Vehicle constructor(make: String, model: String) {
+    open fun accelerate() {
         println("vroom vroom")
     }
     fun park() {
@@ -19,21 +20,12 @@ class Vehicle constructor(make: String, model: String) {
     }
 }
 
-class Car constructor(make: String, model: String, color: String) {
-    val make = make
-    val model = model
-    val color = color
-
-    fun accelerate() {
-        println("vroom vroom")
-    }
-
-    fun details() {
-        println("This is a $color $make $model")
-    }
+class Car constructor(make: String, model: String, color: String): Vehicle(make, model) {
+    override fun accelerate() {
+        println("We are going ludicrous mode!!")    }
 }
 
-class Truck(val make: String, val model: String, val towingCapacity: Int) {
+class Truck(val make: String, val model: String, val towingCapacity: Int): Vehicle(make, model) {
     fun tow() {
         println("taking the horses to the rodeo")
     }
@@ -41,5 +33,4 @@ class Truck(val make: String, val model: String, val towingCapacity: Int) {
     fun details() {
         println("The $make $model has a towing capacity of $towingCapacity lbs")
     }
-
 }
