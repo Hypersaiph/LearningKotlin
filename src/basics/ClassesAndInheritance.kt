@@ -36,5 +36,5 @@ class Truck(val make: String, val model: String, val towingCapacity: Int): Vehic
 
     fun details() {
         println("The $make $model has a towing capacity of $towingCapacity lbs")
-    }
+    }//random comment
 }
